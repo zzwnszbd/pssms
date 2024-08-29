@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chivotech.pssms.mapper.OrdersMapper">
+
+    <resultMap id="BaseResultMap" type="com.chivotech.pssms.entity.Orders">
+            <id property="orderNo" column="order_no" jdbcType="VARCHAR"/>
+            <result property="supplierId" column="supplier_id" jdbcType="INTEGER"/>
+            <result property="invalid" column="invalid" jdbcType="INTEGER"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="verifyPerson" column="verify_person" jdbcType="VARCHAR"/>
+            <result property="verifyDate" column="verify_date" jdbcType="TIMESTAMP"/>
+            <result property="employeeName" column="employee_name" jdbcType="VARCHAR"/>
+            <result property="orderDate" column="order_date" jdbcType="TIMESTAMP"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="orderType" column="order_type" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        order_no,supplier_id,invalid,
+        status,verify_person,verify_date,
+        employee_name,order_date,remark,
+        order_type
+    </sql>
+</mapper>

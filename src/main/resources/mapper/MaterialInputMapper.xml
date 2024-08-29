@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chivotech.pssms.mapper.MaterialInputMapper">
+
+    <resultMap id="BaseResultMap" type="com.chivotech.pssms.entity.MaterialInput">
+            <id property="materialInputId" column="material_input_id" jdbcType="INTEGER"/>
+            <result property="materialId" column="material_id" jdbcType="INTEGER"/>
+            <result property="materialCode" column="material_code" jdbcType="VARCHAR"/>
+            <result property="materialName" column="material_name" jdbcType="VARCHAR"/>
+            <result property="batchNo" column="batch_no" jdbcType="VARCHAR"/>
+            <result property="orderId" column="order_id" jdbcType="VARCHAR"/>
+            <result property="supplierId" column="supplier_id" jdbcType="INTEGER"/>
+            <result property="supplierName" column="supplier_name" jdbcType="VARCHAR"/>
+            <result property="storageId" column="storage_id" jdbcType="INTEGER"/>
+            <result property="storageName" column="storage_name" jdbcType="VARCHAR"/>
+            <result property="style" column="style" jdbcType="VARCHAR"/>
+            <result property="unitName" column="unit_name" jdbcType="VARCHAR"/>
+            <result property="orderCount" column="order_count" jdbcType="DECIMAL"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="orderDate" column="order_date" jdbcType="TIMESTAMP"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="orderNo" column="order_no" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        material_input_id,material_id,material_code,
+        material_name,batch_no,order_id,
+        supplier_id,supplier_name,storage_id,
+        storage_name,style,unit_name,
+        order_count,user_name,order_date,
+        status,order_no
+    </sql>
+</mapper>

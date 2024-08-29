@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chivotech.pssms.mapper.StorageMapper">
+
+    <resultMap id="BaseResultMap" type="com.chivotech.pssms.entity.Storage">
+            <id property="storageId" column="storage_id" jdbcType="INTEGER"/>
+            <result property="storageCode" column="storage_code" jdbcType="VARCHAR"/>
+            <result property="storageName" column="storage_name" jdbcType="VARCHAR"/>
+            <result property="chairman" column="chairman" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="position" column="position" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        storage_id,storage_code,storage_name,
+        chairman,phone,position
+    </sql>
+</mapper>

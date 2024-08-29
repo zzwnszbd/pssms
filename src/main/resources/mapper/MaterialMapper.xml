@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chivotech.pssms.mapper.MaterialMapper">
+
+    <resultMap id="BaseResultMap" type="com.chivotech.pssms.entity.Material">
+            <id property="materialId" column="material_id" jdbcType="INTEGER"/>
+            <result property="materialCode" column="material_code" jdbcType="VARCHAR"/>
+            <result property="materialName" column="material_name" jdbcType="VARCHAR"/>
+            <result property="style" column="style" jdbcType="VARCHAR"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="materialUnit" column="material_unit" jdbcType="VARCHAR"/>
+            <result property="bagUnit" column="bag_unit" jdbcType="VARCHAR"/>
+            <result property="prodTypeId" column="prod_type_id" jdbcType="INTEGER"/>
+            <result property="materialTypeId" column="material_type_id" jdbcType="INTEGER"/>
+            <result property="formula" column="formula" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        material_id,material_code,material_name,
+        style,remark,material_unit,
+        bag_unit,prod_type_id,material_type_id,
+        formula
+    </sql>
+</mapper>
